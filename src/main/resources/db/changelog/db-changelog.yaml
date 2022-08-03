@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - include:
+      file: src/main/resources/db/changelog/first-try.sql
+      relativeToChangeLogFile: true
+  - changeSet:
+      id: 3
+      author: alex
+      changes:
+        - tagDatabase:
+            tag: version_1
+
+  - include:
+      file: src/main/resources/db/changelog/second.sql
+      relativeToChangeLogFile: true
+
+  - changeSet:
+      id: 6
+      author: alex
+      changes:
+        - tagDatabase:
+            tag: version_2
+
