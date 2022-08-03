@@ -12,9 +12,8 @@ pipeline {
 
         stage ("Waiting") {
             steps{
-                def time = 10
                 echo "Waiting 10 seconds for deployment to complete prior starting smoke testing"
-                sleep time.toInteger() // seconds
+                sleep (10) // seconds
             }
 
         }
