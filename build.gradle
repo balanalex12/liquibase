@@ -43,7 +43,7 @@ liquibase {
 	activities {
 		main {
 			changeLogFile 'src/main/resources/db/changelog/db-changelog.yaml'
-			url "jdbc:postgresql://postgres:5432/factory"
+			url "jdbc:postgresql://postgres:5432/postgres"
 			username "postgres"
 			password "admin"
 			driver "org.postgresql.Driver"
