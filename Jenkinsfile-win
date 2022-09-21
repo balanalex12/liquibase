@@ -16,7 +16,7 @@ pipeline {
          stage ("Waiting") {
                     steps{
                         echo "Waiting 10 seconds for deployment to complete prior starting smoke testing"
-                        echo ${env.JAVA_HOME}
+                        echo ${env.TURNIRO-CORE-API-PORT}
                         sleep (10) // seconds
                     }
 
