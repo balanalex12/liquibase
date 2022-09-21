@@ -2,18 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Clean and clone repository') {
-            steps {
-
-                git branch: 'main', url: 'https://github.com/balanalex12/liquibase.git'
-
-            }
-        }
 
          stage ("Waiting") {
                     steps{
                         echo "Waiting 10 seconds for deployment to complete prior starting smoke testing"
-                        echo ${env.TURNIRO-CORE-API-PORT}
+                        echo env.TURNIRO-CORE-API-PORT
                         sleep (10) // seconds
                     }
 
